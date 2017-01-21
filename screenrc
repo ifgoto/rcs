@@ -1,0 +1,42 @@
+#prefix
+#escape ^L^L
+
+
+
+
+#close the welcome msg
+startup_message off
+
+
+
+##start the windows from 1 not 0
+#bind c screen 1
+#bind ^c screen 1
+#bind 0 select 10
+#screen 1
+
+
+#refresh the text while leave it
+altscreen on
+
+
+#for the color to 256 default is 8
+term screen-256color
+
+#make the info bar  more useful
+hardstatus off
+hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+#hardstatus string '%{= kW} %H [%`] %{= Kw} |%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw [%{B} %m-%d %{W} %c %{g}]'
+hardstatus string '%{= kW} [%{B}%m-%d %{W}%c%{g}][%H%{= Kw}]%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw'
+
+
+#while login use the .profile , but seems not working
+#shell -$SHELL
+
+
+defencoding UTF-8
+#defencoding GBK
+encoding UTF-8 GBK
+
+defscrollback 60000
