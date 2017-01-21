@@ -1,0 +1,39 @@
+
+!!!!!!!!!!!!!!!!!!!!!!begin
+!
+!swap super ==> alt ,ctrl==>super ,alt==>ctrl
+!
+clear Mod1
+clear Mod4
+remove Control = Control_L
+
+
+keycode 204 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 206 = NoSymbol NoSymbol NoSymbol NoSymbol
+keycode 207 = NoSymbol NoSymbol NoSymbol NoSymbol
+
+
+keycode 64 = Control_L Control_L Control_L Control_L
+!keycode 108 = Control_R Control_R Control_R Control_R
+
+
+keycode 133 = Alt_L Alt_L Alt_L Alt_L
+!keycode 134 = Alt_R Alt_R Alt_R Alt_R
+
+
+keycode  37 = Super_L Super_L Super_L Super_L
+!keycode 105 = Super_R Super_R Super_R Super_R
+
+
+add Control = Control_L
+add Mod4 = Super_L
+add Mod1 = Alt_L Meta_L
+
+
+
+
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
+!!!!!!!!!!!!!!!!!!!!!!end
