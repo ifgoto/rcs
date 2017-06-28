@@ -7,6 +7,7 @@ set ignorecase
 set hls
 set number
 
+syntax on
 
 let mapleader = ","
 map <leader>mn :Explore<cr>
