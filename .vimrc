@@ -24,9 +24,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "for the name the date time
 map <leader>dt a<C-R>=strftime("%Y%m%d %H:%M:%S %u/7")<CR><Esc>
-map <leader>na aqhzhu@nt
+map <leader>na azWX486641
 imap <leader>dt <C-R>=strftime("%Y%m%d %H:%M:%S %u/7")<CR>
-imap <leader>na qhzhu@nt
+imap <leader>na zWX486641
 
 
 "netrw file list
