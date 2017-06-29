@@ -9,11 +9,19 @@ startup_message off
 
 
 
-##start the windows from 1 not 0
-#bind c screen 1
-#bind ^c screen 1
-#bind 0 select 10
-#screen 1
+#start the windows from 1 not 0
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+bind ! select 11
+bind @ select 12
+bind # select 13
+bind $ select 14
+bind % select 15
+bind ^ select 16
+bind & select 17
+
+screen 1
 
 
 #refresh the text while leave it
