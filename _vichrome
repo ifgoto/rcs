@@ -1,0 +1,86 @@
+
+alias ext TabOpenNew chrome://extensions/
+alias option TabOpenNew chrome://settings/browser
+alias downloads TabOpenNew chrome://downloads
+alias history TabOpenNew chrome://history
+
+
+# mappings for opening your favorite web page
+#nmap <Space>tw :TabOpenNew http://www.twitter.com
+#nmap <Space>gr :TabOpenNew http://www.google.com/reader
+#nmap <Space>m :TabOpenNew https://mail.google.com/mail/#inbox
+nmap ,db :TabOpenNew http://www.douban.com
+nmap ,fm :TabOpenNew http://douban.fm
+nmap ,dn :TabOpenNew http://blog.csdn.net/tryfinally
+nmap ,cn :TabOpenNew http://www.cnblogs.com/vimmer/admin/EditPosts.aspx
+nmap ,xm :TabOpenNew http://www.xiami.com/ 
+nmap ,wk :TabOpenNew http://en.wikipedia.org/wiki/Main_Page
+#stopwatch
+nmap ,sw :TabOpenNew http://www.rubik.com.cn/stopwatch.htm
+#youdao note
+nmap ,yd :TabOpenNew http://note.youdao.com/
+#google search
+nmap ,go :TabOpenNew http://209.116.186.246/
+#ubuntu
+nmap ,ub :TabOpenNew http://forum.ubuntu.org.cn
+#youdao cidian
+nmap ,di :TabOpenNew http://dict.youdao.com/?keyfrom=cidian
+#nantian project manage
+nmap ,mg :TabOpenNew http://183.62.240.234:9104/zentao/webapp/
+
+ 
+
+
+# F for continuous f-Mode
+# this is recomended setting but commented out by default.
+# if you want to use this setting, use the following
+
+
+nmap F :GoFMode --newtab --continuous
+nmap d :GoFMode --newtab
+
+
+nmap j : PageHalfDown
+nmap k :PageHalfUp
+nmap H :BackHist
+nmap L :ForwardHist
+nmap h :TabFocusPrev
+nmap l :TabFocusNext
+
+
+# if you want to change the key used to escape EmergencyMode mode,
+# use emap like the following
+#emap <ESC> :Escape
+
+
+## pagecmd offers you page specific key mapping.
+# in this example you can use <C-l>, <C-h> for moving between tabs
+# on all web pages regardless of your ignored list setting
+# because pagecmd has higher priority than ignored URLs.
+#pagecmd * nmap <C-l> :TabFocusNext
+#pagecmd * nmap <C-h> :TabFocusPrev
+
+
+# almost all Vichrome functions don't work properly for pdf contents
+# so it's useful to enable default key bindings for pdf file.
+pagecmd *.pdf nmap <C-f> <NOP>
+
+
+# if you want to use twitter web's key binding, write settings like below
+#pagecmd http*://twitter.com/* nmap f <NOP>
+#pagecmd http*://twitter.com/* nmap r <NOP>
+
+ 
+
+ 
+
+#------------------------------------------------------------------------------------------------------
+
+#ignore_urls
+#http*://mail.google.com/*
+#http*://www.google.co*/reader/*
+#http*://docs.google.com/*
+#http*://www.google.com/calendar/*
+#https://pomotodo.com/*
+#https://www.shiyanlou.com/courses/*
+#https://play.freeciv.org/*
